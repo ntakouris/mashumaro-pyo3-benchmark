@@ -5,7 +5,7 @@ import schema
 import schema_rs
 
 if __name__ == "__main__":
-    loop_times = 10_000
+    loop_times = 1_000_000
 
     my_portfolio = schema.Portfolio(
         currencies=[

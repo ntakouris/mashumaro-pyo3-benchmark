@@ -85,17 +85,15 @@ Portfolio.from_json(my_portfolio_rs)
 On some average Ryzen 5 desktop (`python3 benchmarks.py`):
 
 ```txt
-mashumaro(to_json):      1.031755450003402e-05
-pyo3(to_json):           0.006886094000037701
+mashumaro(to_json):      9.238211507999949e-06
+pyo3(to_json):           0.6136147130000609
 
-mashumaro(to_msgpack):   0.081839428999956
-pyo3(to_msgpack):        0.081839428999956
+mashumaro(to_msgpack):   7.3272712759999195
+pyo3(to_msgpack):        7.3272712759999195
 
-mashumaro(from_json):    1.3166548300068826e-05
-pyo3(from_json):         0.010426101999655657
+mashumaro(from_json):    1.1536665370000265e-05
+pyo3(from_json):         1.0166272180003944
 
-mashumaro(from_msgpack): 0.12124465800025064
-pyo3(from_msgpack):      0.010034232000180054
+mashumaro(from_msgpack): 11.083359452999503
+pyo3(from_msgpack):      0.974420227000337
 ```
-
-.. rust <--> python bindings not that speedy for those kind of tasks ..
