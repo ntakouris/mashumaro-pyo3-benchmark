@@ -29,12 +29,13 @@ if __name__ == "__main__":
         ],
     )
 
-    # json
+    # mashumaro -> json
     mashumaro_to_json = (
         timeit.timeit("my_portfolio.to_json()", globals=globals(), number=loop_times)
         / loop_times
     )
 
+    # json -> mashumaro
     json_payload = my_portfolio.to_json()
     mashumaro_from_json = (
         timeit.timeit(
@@ -45,10 +46,12 @@ if __name__ == "__main__":
         / loop_times
     )
 
+    # pyo3 -> json
     pyo3_to_json = timeit.timeit(
         "my_portfolio_rs.to_json()", globals=globals(), number=loop_times
     )
 
+    # json -> pyo3
     json_payload = my_portfolio_rs.to_json()
     pyo3_from_json = timeit.timeit(
         "schema_rs.Portfolio.from_json(json_payload)",
@@ -56,11 +59,12 @@ if __name__ == "__main__":
         number=loop_times,
     )
 
-    # msgpack
+    # mashumaro -> msgpack
     mashumaro_to_msgpack = timeit.timeit(
         "my_portfolio.to_msgpack()", globals=globals(), number=loop_times
     )
 
+    # msgpack -> mashumaro
     msgpack_payload = my_portfolio.to_msgpack()
     mashumaro_from_msgpack = timeit.timeit(
         "schema.Portfolio.from_msgpack(msgpack_payload)",
@@ -68,10 +72,12 @@ if __name__ == "__main__":
         number=loop_times,
     )
 
+    # pyo3 -> msgpack
     pyo3_to_msgpack = timeit.timeit(
         "my_portfolio_rs.to_msgpack()", globals=globals(), number=loop_times
     )
 
+    # msgpack -> pyo3
     msgpack_payload = my_portfolio_rs.to_msgpack()
     pyo3_from_msgpack = timeit.timeit(
         "schema_rs.Portfolio.from_msgpack(msgpack_payload)",
