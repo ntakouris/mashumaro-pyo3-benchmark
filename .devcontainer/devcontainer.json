@@ -1,0 +1,30 @@
+{
+    "name": "Python 3",
+    "build": {
+      "dockerfile": "../Dockerfile",
+    },
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+      "editor.formatOnSave": true,
+      // python
+      "python.defaultInterpreterPath": "python3",
+      "jupyter.notebookFileRoot": "${PYTHONPATH}",
+      "python.languageServer": "Pylance",
+      // linting & formatting
+      "python.linting.enabled": true,
+      "python.formatting.provider": "black",
+      "python.formatting.blackPath": "black",
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "ms-vsliveshare.vsliveshare",
+      "davidanson.vscode-markdownlint",
+      "rust-lang.rust"
+    ],
+    "runArgs": [
+      "--network=host"
+    ]
+  }
