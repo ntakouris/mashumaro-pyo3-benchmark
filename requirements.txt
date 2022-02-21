@@ -1,3 +1,4 @@
 black
 maturin
 mashumaro
+msgpack
