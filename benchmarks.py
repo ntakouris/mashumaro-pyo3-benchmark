@@ -91,7 +91,7 @@ if __name__ == "__main__":
         pyo3(to_json):           {pyo3_to_json}
 
         mashumaro(to_msgpack):   {mashumaro_to_msgpack}
-        pyo3(to_msgpack):        {mashumaro_to_msgpack}
+        pyo3(to_msgpack):        {pyo3_to_msgpack}
 
         mashumaro(from_json):    {mashumaro_from_json}
         pyo3(from_json):         {pyo3_from_json}

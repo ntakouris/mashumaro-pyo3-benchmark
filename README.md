@@ -88,8 +88,8 @@ On some average Ryzen 5 desktop (`python3 benchmarks.py`):
 mashumaro(to_json):      9.238211507999949e-06
 pyo3(to_json):           0.6136147130000609
 
-mashumaro(to_msgpack):   7.3272712759999195
-pyo3(to_msgpack):        7.3272712759999195
+mashumaro(to_msgpack):   7.288172608000423
+pyo3(to_msgpack):        0.6303951800000505
 
 mashumaro(from_json):    1.1536665370000265e-05
 pyo3(from_json):         1.0166272180003944
